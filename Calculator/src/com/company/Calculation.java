@@ -10,7 +10,7 @@ public class Calculation {
     }
 
     //Method for subtraction
-    public float substract(float num1, float num2) {
+    public float subtract(float num1, float num2) {
         result = num1 - num2;
         return result;
     }

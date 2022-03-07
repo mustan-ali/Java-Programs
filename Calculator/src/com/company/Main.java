@@ -28,7 +28,7 @@ public class Main {
         }
 
         else if (operator == '-') {
-            float r = c.substract(ci.getNumber1(), ci.getNumber2());
+            float r = c.subtract(ci.getNumber1(), ci.getNumber2());
             System.out.println("Subtraction: " + ci.getNumber1() + " - " + ci.getNumber2() + " = " + r);
         }
 
