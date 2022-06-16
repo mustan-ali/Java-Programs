@@ -1,32 +1,32 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] Strings) {
+
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter A: ");
+        System.out.print("Enter the value of a: ");
         double a = input.nextDouble();
 
-        System.out.print("Enter B: ");
+        System.out.print("Enter the value of b: ");
         double b = input.nextDouble();
 
-        System.out.print("Enter C: ");
+        System.out.print("Enter the value of c: ");
         double c = input.nextDouble();
 
-        double result = Math.pow(b, 2) - 4 * a * c;
+        double discriminant = Math.pow(b, 2) - 4.0 * a * c;
 
-        if (result < 0) {
-            System.out.println("No real roots");
+        if (discriminant > 0.0) {
+            double r1 = (-b + Math.pow(discriminant, 0.5)) / (2.0 * a);
+            double r2 = (-b - Math.pow(discriminant, 0.5)) / (2.0 * a);
+            System.out.println("The roots are " + r1 + " and " + r2);
         } 
-        else if (result == 0) {
-            double root = -b / (2 * a);
-            System.out.println("Root = " + root);
+        else if (discriminant == 0.0) {
+            double r1 = -b / (2.0 * a);
+            System.out.println("The root is " + r1);
         } 
         else {
-            double root1 = (-b + Math.sqrt(result)) / (2 * a);
-            double root2 = (-b - Math.sqrt(result)) / (2 * a);
-            System.out.println("Root 1 = " + root1);
-            System.out.println("Root 2 = " + root2);
+            System.out.println("Roots are not real.");
         }
     }
 }
